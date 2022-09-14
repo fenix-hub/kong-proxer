@@ -7,7 +7,7 @@ function ProxerHandler.access(self, config)
     local target_host = ngx.ctx.balancer_address.host .. ":" .. ngx.ctx.balancer_address.port
     kong.log("Forwarding request for: " .. target_host)
     
-    local proxy_schema, proxy_host, proxy_port, proxy_ssl_port = config.proxer_schema, config.proxer_host, config.proxer_port, config.proxer_ssl_port
+    local proxer_schema, proxer_host, proxer_port, proxer_ssl_port = config.proxer_schema, config.proxer_host, config.proxer_port, config.proxer_ssl_port
     
     if proxer_schema == '' or proxer_schema == nil then
         proxer_schema = ngx.ctx.balancer_address.schema
