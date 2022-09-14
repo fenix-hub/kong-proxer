@@ -1,5 +1,4 @@
 return {
-    name = "proxer",
     fields = {
         proxer_schema = {required = false, type = 'string'},
         proxer_host = {required = true, type = 'string'},
