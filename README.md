@@ -3,7 +3,7 @@
 Kong plugin which forwards requests to a [proxer instance](https://github.com/fenix-hub/proxer) (liteweight Go proxy) before hitting the target service host.  
 You can find the forward proxy here 👉 [proxer](https://github.com/fenix-hub/proxer)
 
-![proxer-diagram](proxer.png)
+![proxer-diagram](proxer.drawio.svg)
 
 ## Configuration
 - `proxer_schema` : default schema to use when forwarding to *proxer*. If left empty, the schema of the upstream request will be used.
