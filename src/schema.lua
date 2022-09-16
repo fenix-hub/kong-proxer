@@ -8,12 +8,13 @@ return {
             config = {
                 type = "record",
                 fields = {
-                    { proxer_schema = {required = false, type = "string", one_of = { "http", "https" } } },
-                    { proxer_host = {required = true, type = "string"} },
-                    { proxer_port = {required = true, type = "number", default = 80} },
-                    { proxer_ssl_port = {required = false, type = "number", default = 443} },
-                    { proxer_schema_header = {required = true, type = "string", default = "X-ProxyTo-Schema"} },
-                    { proxer_host_header = {required = true, type = "string", default = "X-ProxyTo-Host"} }   
+                    { matching_tags = { required = false, type = "array", elements = {}, default = { "proxer-hosted" } } },
+                    { proxer_schema = { required = false, type = "string", one_of = { "http", "https" } } },
+                    { proxer_host = { required = true, type = "string" } },
+                    { proxer_port = { required = true, type = "number", default = 80 } },
+                    { proxer_ssl_port = { required = false, type = "number", default = 443 } },
+                    { proxer_schema_header = { required = true, type = "string", default = "X-ProxyTo-Schema" } },
+                    { proxer_host_header = { required = true, type = "string", default = "X-ProxyTo-Host" } }   
                 }
             }
         }
