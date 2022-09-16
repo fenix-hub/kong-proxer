@@ -1,6 +1,6 @@
 # kong-proxer
 
-Kong **3.x** plugin which forwards requests to a [proxer instance](https://github.com/fenix-hub/proxer) (liteweight Go proxy) before hitting the target service host.  
+Kong **3.x** plugin which forwards requests to a [proxer instance](https://github.com/fenix-hub/proxer) (liteweight Go proxy wrapper) before hitting the target service host.  
 You can find the forward proxy here 👉 [proxer](https://github.com/fenix-hub/proxer)
 
 ![proxer-diagram](proxer.svg)
