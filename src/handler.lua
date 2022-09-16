@@ -16,15 +16,15 @@ function ProxerHandler.access(self, config)
   local proxer_schema, proxer_host, proxer_port, proxer_ssl_port = config.proxer_schema, config.proxer_host, config.proxer_port, config.proxer_ssl_port
 
   if proxer_schema == '' or proxer_schema == nil then
-      proxer_schema = ngx.ctx.balancer_address.schema
+      proxer_schema = ngx.ctx.balancer_data.schema
   end
   if proxer_schema == "https" then
       proxer_port = proxer_ssl_port
   end
 
-  ngx.ctx.balancer_address.schema = proxer_schema
-  ngx.ctx.balancer_address.host = proxer_host
-  ngx.ctx.balancer_address.port = proxer_port
+  ngx.ctx.balancer_data.schema = proxer_schema
+  ngx.ctx.balancer_data.host = proxer_host
+  ngx.ctx.balancer_data.port = proxer_port
 
   ngx.req.set_header(config.proxer_schema_header, target_schema)
   ngx.req.set_header(config.proxer_host_header, target_host)
