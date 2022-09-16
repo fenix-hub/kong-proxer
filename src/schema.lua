@@ -8,7 +8,7 @@ return {
             config = {
                 type = "record",
                 fields = {
-                    { proxer_schema = {required = false, type = "string"} },
+                    { proxer_schema = {required = false, type = "string", one_of = { "http", "https" } } },
                     { proxer_host = {required = true, type = "string"} },
                     { proxer_port = {required = true, type = "number", default = 80} },
                     { proxer_ssl_port = {required = false, type = "number", default = 443} },
