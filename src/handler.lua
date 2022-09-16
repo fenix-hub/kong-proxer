@@ -15,7 +15,7 @@ function ProxerHandler.access(self, config)
   end
   
   -- Initialize target host, which is the real target of the service
-  local target_host = ngx.ctx.balancer_address.host .. ":" .. ngx.ctx.balancer_address.port
+  local target_host = ngx.ctx.balancer_data.host .. ":" .. ngx.ctx.balancer_data.port
   kong.log("Forwarding request for: " .. target_host)
 
   -- Load all configuration variables
