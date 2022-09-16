@@ -8,7 +8,7 @@ return {
             config = {
                 type = "record",
                 fields = {
-                    { matching_tags = { required = false, type = "array", elements = {}, default = { "proxer-hosted" } } },
+                    { ignore_on_tags = { required = false, type = "array", elements = {}, default = { "proxer-hosted" } } },
                     { proxer_schema = { required = false, type = "string", one_of = { "http", "https" } } },
                     { proxer_host = { required = true, type = "string" } },
                     { proxer_port = { required = true, type = "number", default = 80 } },
