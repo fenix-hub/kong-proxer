@@ -1,5 +1,5 @@
 package = "kong-proxer"
-version = "2.0-1"
+version = "2.0-2"
 source = {
   url = "https://github.com/fenix-hub/kong-proxer.git"
 }
@@ -8,7 +8,7 @@ description = {
   license = "Apache 2.0"
 }
 dependencies = {
-  "lua ~> 5.1"
+  "lua >= 5.1"
 }
 build = {
   type = "builtin",
