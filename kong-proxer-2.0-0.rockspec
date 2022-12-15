@@ -1,5 +1,5 @@
 package = "kong-proxer"
-version = "2.0-0"
+version = "2.0-1"
 source = {
   url = "https://github.com/fenix-hub/kong-proxer.git"
 }
