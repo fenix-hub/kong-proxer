@@ -6,9 +6,12 @@ local ProxerHandler = {
 function ProxerHandler.access(self, config)
   
   -- Only apply logic to Services with at least one `tag` in `ignore_on_tags`
-  for _, tag in pairs(config.ignore_on_tags) do
-    for _, ignore_tag in pairs(ngx.ctx.service.tags) do
+  for i, tag in pairs(config.ignore_on_tags) do
+    kong.log("tag: " + i + " " +  tag)
+    for j, ignore_tag in pairs(ngx.ctx.service.tags) do
+        kong.log("ignore_tag: " + j + " " + ignore_tag)
         if tag == ignore_tag then
+            kong.log("ignoring!")
             return
         end
       end
